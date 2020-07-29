@@ -1,8 +1,8 @@
 ---
 templateKey: index-page
-title: Great coffee with a conscience
+title: Testando site Jonathan
 image: /img/home-jumbotron.jpg
-heading: Great coffee with a conscience
+heading: Testando site Jonathan
 subheading: Support sustainable farming while enjoying a cup
 mainpitch:
   title: Why Kaldi
