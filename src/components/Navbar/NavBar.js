@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from "react"
 import { FaAngleDown, FaAngleUp } from 'react-icons/fa'
-import Logo from '../img/logoJose.svg'
+import Logo from '../../img/logoJose.svg'
 
 const links = [
   {
