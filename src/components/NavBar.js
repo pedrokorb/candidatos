@@ -1,6 +1,5 @@
 import React, { useEffect, useRef, useState } from "react"
-import { TiThMenu } from 'react-icons/ti'
-import { RiCloseLine } from 'react-icons/ri'
+import { FaAngleDown, FaAngleUp } from 'react-icons/fa'
 import Logo from '../img/logoJose.svg'
 
 const links = [
@@ -43,11 +42,11 @@ const NavBar = () => {
   }, [scrolled])
 
   return (
-    <div className="z-20 fixed w-full">
+    <div 
+      className={`z-20 fixed w-full duration-300 transition-all nav ${scrolled ? "p-4 bg-white shadow-lg" : "p-5 bg-transparent"}`}
+    >
       <div
-        className={`duration-300 transition-all flex justify-between items-center my-auto nav ${
-          scrolled ? "p-4 bg-white shadow-lg" : "p-5 bg-transparent"
-          }`}
+        className={`max-w-screen-lg mx-auto flex justify-between items-center my-auto `}
         ref={navbar}
       >
         <img 
@@ -58,22 +57,17 @@ const NavBar = () => {
 
         <button
           className={`duration-300 transition-all ${scrolled ? "text-black" : "text-white"} outline-0 lg:hidden`}
-          // style={{
-          //   transform: "translateY(-50%)",
-          //   top: "50%",
-          //   left: "10px",
-          // }}
           onClick={() => {
             setSidebarOpen(!sidebarOpen)
           }}
         >
-          {sidebarOpen ? (<RiCloseLine className="w-8 h-8" />) : (<TiThMenu className="w-8 h-8" />)}
+          {sidebarOpen ? (<FaAngleUp className="w-8 h-8" />) : (<FaAngleDown className="w-8 h-8" />)}
         </button>
       
         <div className="hidden lg:block">
           <div className={`nav-links flex ${scrolled ? "text-black" : "text-white"}`}>
             {links.map((link) => (
-              <p className="px-2">{link.name}</p>
+              <p key={link.name} className="px-2">{link.name}</p>
             ))}
           </div>
         </div>
@@ -81,7 +75,9 @@ const NavBar = () => {
 
         {sidebarOpen && (
           <div>
-            <div className={`lg:hidden duration-300 transition-all bg-white ${scrolled ? "bg-opacity-100" : "bg-opacity-75"} m-4 h-full shadow-md rounded-lg flex flex-col justify-center`}>
+            <div 
+              className={`lg:hidden duration-300 transition-all bg-white ${scrolled ? "bg-opacity-100" : "bg-opacity-75"} m-4 h-full shadow-md rounded-lg flex flex-col justify-center`}
+            >
               <div className="text-center">
                 <div className={`nav-links`}>
                   {links.map((link) => (
