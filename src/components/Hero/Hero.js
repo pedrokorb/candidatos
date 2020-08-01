@@ -8,7 +8,7 @@ const Hero = ({ titulo }) => {
       className="relative w-full overflow-hidden"
       style={{
         backgroundImage: `url(${Image})`,
-        height: '70vh',
+        height: '350px',
         backgroundAttachment: 'fixed',
         backgroundPosition: 'botton center',
         backgroundPositionX: 'center',
