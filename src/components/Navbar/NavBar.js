@@ -1,11 +1,13 @@
 import React, { useEffect, useRef, useState } from "react"
+import { Link } from 'gatsby'
+
 import { FaAngleDown, FaAngleUp } from 'react-icons/fa'
-import Logo from '../img/logoJose.svg'
+import Logo from '../../img/logoJose.svg'
 
 const links = [
   {
     name: "Sobre",
-    value: "#sobre"
+    value: "/about"
   },
   {
     name: "Propostas",
@@ -49,11 +51,13 @@ const NavBar = () => {
         className={`max-w-screen-lg mx-auto flex justify-between items-center my-auto `}
         ref={navbar}
       >
-        <img 
-          src={Logo}
-          alt={`Logotipo Candidato ${navbarHeight}`} 
-          className={`duration-300 transition-all ${scrolled ? "w-16" : "w-24"}`} 
-        />
+        <Link to="/">
+          <img 
+            src={Logo}
+            alt={`Logotipo Candidato ${navbarHeight}`} 
+            className={`duration-300 transition-all ${scrolled ? "w-16" : "w-24"}`} 
+          />
+        </Link>
 
         <button
           className={`duration-300 transition-all ${scrolled ? "text-black" : "text-white"} outline-0 lg:hidden`}
@@ -67,7 +71,9 @@ const NavBar = () => {
         <div className="hidden lg:block">
           <div className={`nav-links flex ${scrolled ? "text-black" : "text-white"}`}>
             {links.map((link) => (
-              <p key={link.name} className="px-2">{link.name}</p>
+              <Link key={link.name} to={link.value}>
+                <p className="px-2">{link.name}</p>
+              </Link>
             ))}
           </div>
         </div>
@@ -81,7 +87,9 @@ const NavBar = () => {
               <div className="text-center">
                 <div className={`nav-links`}>
                   {links.map((link) => (
-                    <p key={link.name} className="py-2">{link.name}</p>
+                    <Link key={link.name} to={link.value}>
+                      <p className="py-2">{link.name}</p>
+                    </Link>
                   ))}
                 </div>
               </div>
