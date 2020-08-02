@@ -99,7 +99,12 @@ collections:
           - {label: Imagem do cabeçalho, name: image, widget: image}
           - {label: "Título", name: "title", widget: "string"}
           - {label: "Subtítulo", name: "subtitle", widget: "string"}
-          - {label: "Conteúdo", name: "body", widget: "markdown"}
+          - label: "Imagens" 
+            name: "images" 
+            widget: "list" 
+            fields: 
+              - {label: "Título", name: "title", widget: "string"} 
+              - {label: "Imagem", name: "image", widget: "image"}
       
       - file: "src/pages/products/index.md"
         label: "Products Page"
