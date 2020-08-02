@@ -41,9 +41,9 @@ const Footer = () => {
       <div className="max-w-screen-lg border-b border-white mx-auto py-16">
         <h4 className="text-4xl">Contato</h4>
         <h5 className="text-2xl my-8">Siga-nos nas redes sociais ou nos mande um e-mail</h5>
-        <div className="grid grid-flow-col grid-rows-1 gap-1 justify-center">
+        <div className="flex flex-col md:flex-row justify-center">
           { socialNetworks.map((social) => (
-            <a href={social.link} key={social.name}>
+            <a className="mx-auto" href={social.link} key={social.name}>
               {getIcon(social.icon)}
               <p>{social.shortLink}</p>
             </a>
