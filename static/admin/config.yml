@@ -82,7 +82,7 @@ collections:
           - {label: Imagem do cabeçalho, name: image, widget: image}
           - {label: "Título", name: "title", widget: "string"}
           - {label: "Subtítulo", name: "subtitle", widget: "string"}
-          - {label: "Conteúdo", name: "body", widget: "markdown"}
+          - {label: Blurbs, name: blurbs, widget: list, fields: [{label: Image, name: image, widget: image}, {label: Text, name: text, widget: text}]}
       
       - file: "src/pages/fotos/index.md"
         label: "Página Galeria de Fotos"
