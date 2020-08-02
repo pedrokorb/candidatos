@@ -100,7 +100,7 @@ collections:
           - {label: "Título", name: "title", widget: "string"}
           - {label: "Subtítulo", name: "subtitle", widget: "string"}
           - label: "Imagens" 
-            name: "images" 
+            name: "fotos" 
             widget: "list" 
             fields: 
               - {label: "Título", name: "title", widget: "string"} 
