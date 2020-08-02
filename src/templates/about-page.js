@@ -46,6 +46,7 @@ const AboutPage = ({ data }) => {
       <>
         <Hero
           title={post.frontmatter.title}
+          imageSrc={post.frontmatter.image.childImageSharp.fluid.src}
         />
         <Content>
           <h2 className="text-3xl px-8 text-center mb-8">
@@ -69,6 +70,13 @@ export const aboutPageQuery = graphql`
     markdownRemark(id: { eq: $id }) {
       html
       frontmatter {
+        image {
+          childImageSharp {
+            fluid(maxWidth: 2048, quality: 100) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
         title
         subtitle
       }

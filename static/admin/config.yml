@@ -87,7 +87,7 @@ collections:
             widget: "list" 
             fields: 
               - {label: "Título", name: "title", widget: "string"} 
-              - {label: "Subtítulo", name: "subtitle", widget: "string"}
+              - {label: "Local", name: "local", widget: "string"}
               - {label: "Descrição", name: "description", widget: "text"}
               - {label: "Data/Período", name: "date", widget: "string"}
       

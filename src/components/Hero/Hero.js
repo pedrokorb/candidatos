@@ -1,13 +1,12 @@
 import React from "react"
-import Image from "../../img/background.jpg";
 
-const Hero = ({ title }) => {
+const Hero = ({ title, imageSrc }) => {
 
   return (
     <div 
       className="relative w-full overflow-hidden"
       style={{
-        backgroundImage: `url(${Image})`,
+        backgroundImage: `url(${imageSrc})`,
         height: '350px',
         backgroundAttachment: 'fixed',
         backgroundPosition: 'botton center',
