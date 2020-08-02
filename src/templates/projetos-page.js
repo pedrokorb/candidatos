@@ -11,11 +11,14 @@ const ProjetosPage = ({ data }) => {
   return (
     <Layout>
       <Hero
-        title="Projetos"
+        title={post.frontmatter.title}
+        imageSrc={post.frontmatter.image.childImageSharp.fluid.src}
       />
-      {console.log(post.frontmatter)}
       <Content>
-        <p>Olá</p>
+        <h2 className="text-3xl px-8 text-center mb-8">
+          {post.frontmatter.subtitle}
+        </h2>
+        <div className="content" dangerouslySetInnerHTML={{ __html: post.html }} />
       </Content>
     </Layout>
   )
@@ -28,6 +31,13 @@ export const projetosPageQuery = graphql`
     markdownRemark(id: { eq: $id }) {
       html
       frontmatter {
+        image {
+          childImageSharp {
+            fluid(maxWidth: 2048, quality: 100) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
         title
         subtitle
       }
