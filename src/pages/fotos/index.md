@@ -1,7 +1,28 @@
 ---
-templateKey: 'fotos-page'
+templateKey: fotos-page
 path: /fotos
-title: About our values
+image: /img/products-grid3.jpg
+title: Galeria de Fotos
+subtitle: Veja algumas fotos do nosso candidato
+fotos:
+  - title: Café
+    image: /img/blog-index.jpg
+  - title: Cafézinho
+    image: /img/chemex.jpg
+  - title: cafezito
+    image: /img/flavor_wheel.jpg
+  - title: grãos
+    image: /img/home-jumbotron.jpg
+  - title: Servindo
+    image: /img/jumbotron.jpg
+  - title: Fumaça
+    image: /img/products-full-width.jpg
+  - title: Graos
+    image: /img/products-grid1.jpg
+  - title: Xicara
+    image: /img/products-grid2.jpg
+  - title: Coador
+    image: /img/products-grid3.jpg
 ---
 ### Shade-grown coffee
 Coffee is a small tree or shrub that grows in the forest understory in its wild form, and traditionally was grown commercially under other trees that provided shade. The forest-like structure of shade coffee farms provides habitat for a great number of migratory and resident species.
