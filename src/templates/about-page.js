@@ -33,7 +33,7 @@ import Layout from '../components/Layout'
 //   contentComponent: PropTypes.func,
 // }
 
-const AboutPage = ({ data }) => {
+export const AboutPage = ({ data }) => {
   const { markdownRemark: post } = data
 
   return (

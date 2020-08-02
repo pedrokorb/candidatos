@@ -12,7 +12,7 @@ const Gallery = ({ images }) => {
         caption: image.title
       }
     }))
-  }, [])
+  }, []) // eslint-disable-line
 
   return (
     <div 
