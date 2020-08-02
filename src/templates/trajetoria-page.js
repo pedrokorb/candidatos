@@ -32,7 +32,6 @@ export default TrajetoriaPage
 export const trajetoriaPageQuery = graphql`
   query TrajetoriaPage($id: String!) {
     markdownRemark(id: { eq: $id }) {
-      html
       frontmatter {
         image {
           childImageSharp {
