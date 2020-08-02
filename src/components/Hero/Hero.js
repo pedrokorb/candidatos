@@ -1,7 +1,7 @@
 import React from "react"
 import Image from "../../img/background.jpg";
 
-const Hero = ({ titulo }) => {
+const Hero = ({ title }) => {
 
   return (
     <div 
@@ -21,7 +21,7 @@ const Hero = ({ titulo }) => {
           className="mt-40 text-white text-4xl px-10 font-bold"
           style={{ textShadow: '1px 1px 4px rgba(34, 34, 34, 0.6)' }}
         >
-          {titulo}
+          {title}
         </h1>
       </div>
     </div>

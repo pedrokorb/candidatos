@@ -9,7 +9,7 @@ const TrajetoriaPage = () => {
   return (
     <Layout>
       <Hero
-        titulo="Trajetória"
+        title="Trajetória"
       />
       <Content>
         <h2 className="text-3xl px-8 text-center mb-8">

@@ -9,7 +9,7 @@ const FotosPage = () => {
   return (
     <Layout>
       <Hero
-        titulo="Galeria de Fotos"
+        title="Galeria de Fotos"
       />
       <Content>
         <h2 className="text-3xl px-8 text-center mb-8">Veja algumas fotos do nosso candidato</h2>

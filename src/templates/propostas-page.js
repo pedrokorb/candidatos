@@ -8,7 +8,7 @@ const PropostasPage = () => {
   return (
     <Layout>
       <Hero
-        titulo="Propostas"
+        title="Propostas"
       />
       <Content>
         <h2 className="text-3xl px-8 text-center mb-8">

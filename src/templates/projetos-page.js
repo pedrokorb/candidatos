@@ -1,15 +1,19 @@
 import React from 'react'
-import Layout from '../components/Layout'
-import Hero from '../components/Hero/Hero'
-import Content from '../components/Content/Content'
+import { graphql } from 'gatsby'
 
-const ProjetosPage = () => {
+import Content from '../components/Content/Content'
+import Hero from '../components/Hero/Hero'
+import Layout from '../components/Layout'
+
+const ProjetosPage = ({ data }) => {
+  const { markdownRemark: post } = data
 
   return (
     <Layout>
       <Hero
-        titulo="Projetos"
+        title="Projetos"
       />
+      {console.log(post.frontmatter)}
       <Content>
         <p>Olá</p>
       </Content>
@@ -18,4 +22,16 @@ const ProjetosPage = () => {
 }
 
 export default ProjetosPage
+
+export const projetosPageQuery = graphql`
+  query ProjetosPage($id: String!) {
+    markdownRemark(id: { eq: $id }) {
+      html
+      frontmatter {
+        title
+        subtitle
+      }
+    }
+  }
+`
 

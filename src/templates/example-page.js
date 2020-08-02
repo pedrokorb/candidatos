@@ -8,7 +8,7 @@ const ExamplePage = () => {
   return (
     <Layout>
       <Hero
-        titulo="Página de exemplo"
+        title="Página de exemplo"
       />
       <Content>
         <p>Olá</p>
