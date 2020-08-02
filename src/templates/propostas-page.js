@@ -3,12 +3,12 @@ import Layout from '../components/Layout'
 import Hero from '../components/Hero/Hero'
 import Content from '../components/Content/Content'
 
-const ExamplePage = () => {
+const PropostasPage = () => {
 
   return (
     <Layout>
       <Hero
-        titulo="Página de exemplo"
+        titulo="Página de Propostas"
       />
       <Content>
         <p>Olá</p>
@@ -17,5 +17,5 @@ const ExamplePage = () => {
   )
 }
 
-export default ExamplePage
+export default PropostasPage
 

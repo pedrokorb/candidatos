@@ -2,20 +2,21 @@ import React from 'react'
 import Layout from '../components/Layout'
 import Hero from '../components/Hero/Hero'
 import Content from '../components/Content/Content'
+import Timeline from '../components/Timeline/Timeline'
 
-const ExamplePage = () => {
+const TrajetoriaPage = () => {
 
   return (
     <Layout>
       <Hero
-        titulo="Página de exemplo"
+        titulo="Trajetória"
       />
       <Content>
-        <p>Olá</p>
+        <Timeline />
       </Content>
     </Layout>
   )
 }
 
-export default ExamplePage
+export default TrajetoriaPage
 

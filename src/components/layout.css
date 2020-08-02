@@ -1,3 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.vertical-timeline::before {
+  background: rgb(33, 150, 243) !important;
+}
