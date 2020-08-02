@@ -51,11 +51,16 @@ const Footer = () => {
           }
         </div>
       </div>
-      <div className="py-2 text-white flex justify-center">
+      <a 
+        href="https://pedrokorb.com" 
+        target="_blank" 
+        rel="noreferrer" 
+        className="py-2 text-white flex justify-center"
+      >
         <p className="my-auto mx-2">© {new Date().getFullYear()}, desenvolvido por</p>
-        <img src={Logo} alt="Logo"/>
+        <img src={Logo} alt="Logo" className="w-40"/>
         
-      </div>
+      </a>
     </div>
   )
 }
