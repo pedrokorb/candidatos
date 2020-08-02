@@ -22,8 +22,8 @@ const links = [
     value: "/trajetoria"
   },
   {
-    name: "Propostas",
-    value: "/propostas"
+    name: "Fotos",
+    value: "/fotos"
   }
 ]
 
