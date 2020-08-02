@@ -82,7 +82,14 @@ collections:
           - {label: Imagem do cabeçalho, name: image, widget: image}
           - {label: "Título", name: "title", widget: "string"}
           - {label: "Subtítulo", name: "subtitle", widget: "string"}
-          - {label: Blurbs, name: blurbs, widget: list, fields: [{label: Image, name: image, widget: image}, {label: Text, name: text, widget: text}]}
+          - label: "Eventos" 
+            name: "eventos" 
+            widget: "list" 
+            fields: 
+              - {label: "Título", name: "title", widget: "string"} 
+              - {label: "Subtítulo", name: "subtitle", widget: "string"}
+              - {label: "Descrição", name: "description", widget: "text"}
+              - {label: "Data/Período", name: "date", widget: "string"}
       
       - file: "src/pages/fotos/index.md"
         label: "Página Galeria de Fotos"
