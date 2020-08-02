@@ -40,10 +40,10 @@ const Footer = () => {
     <div className="bg-black text-white text-center">
       <div className="max-w-screen-lg border-b border-white mx-auto py-16">
         <h4 className="text-4xl">Contato</h4>
-        <h5 className="text-2xl my-8">Siga-nos nas redes sociais ou nos mande um e-mail</h5>
+        <h5 className="text-2xl px-4 my-8">Siga-nos nas redes sociais ou nos mande um e-mail</h5>
         <div className="flex flex-col md:flex-row justify-center">
           { socialNetworks.map((social) => (
-            <a className="mx-auto" href={social.link} key={social.name}>
+            <a className="mx-auto mb-4 md:mb-0" href={social.link} key={social.name}>
               {getIcon(social.icon)}
               <p>{social.shortLink}</p>
             </a>

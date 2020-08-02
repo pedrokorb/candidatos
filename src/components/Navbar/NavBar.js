@@ -90,7 +90,7 @@ const NavBar = () => {
         {sidebarOpen && (
           <div>
             <div 
-              className={`lg:hidden duration-300 transition-all bg-white ${scrolled ? "bg-opacity-100" : "bg-opacity-75"} m-4 h-full shadow-md rounded-lg flex flex-col justify-center`}
+            className={`lg:hidden duration-300 transition-all ${scrolled ? "bg-opacity-100" : "bg-white bg-opacity-75 shadow-md rounded-lg"} m-4 h-full flex flex-col justify-center`}
             >
               <div className="text-center">
                 <div className={`nav-links`}>
