@@ -11,12 +11,20 @@ const links = [
   },
   {
     name: "Propostas",
-    value: "#propostas"
+    value: "/propostas"
   },
   {
-    name: "Contato", 
-    value: "#contato"
+    name: "Projetos",
+    value: "/projetos"
   },
+  {
+    name: "Trajetória",
+    value: "/trajetoria"
+  },
+  {
+    name: "Propostas",
+    value: "/propostas"
+  }
 ]
 
 const NavBar = () => {
@@ -70,8 +78,8 @@ const NavBar = () => {
       
         <div className="hidden lg:block">
           <div className={`nav-links flex ${scrolled ? "text-black" : "text-white"}`}>
-            {links.map((link) => (
-              <Link key={link.name} to={link.value}>
+            {links.map((link, index) => (
+              <Link key={index} to={link.value}>
                 <p className="px-2">{link.name}</p>
               </Link>
             ))}
@@ -86,8 +94,8 @@ const NavBar = () => {
             >
               <div className="text-center">
                 <div className={`nav-links`}>
-                  {links.map((link) => (
-                    <Link key={link.name} to={link.value}>
+                  {links.map((link, index) => (
+                    <Link key={index} to={link.value}>
                       <p className="py-2">{link.name}</p>
                     </Link>
                   ))}

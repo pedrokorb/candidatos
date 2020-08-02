@@ -48,7 +48,9 @@ const AboutPage = ({ data }) => {
         <Hero
           titulo="Sobre o Candidato"
         />
-        <Content />
+        <Content>
+          <p>Olá</p>
+        </Content>
       </>
     </Layout>
   )
