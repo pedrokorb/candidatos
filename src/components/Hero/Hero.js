@@ -18,7 +18,7 @@ const Hero = ({ titulo }) => {
     >
       <div className="text-center flex flex-row justify-center">
         <h1 
-          className="mt-40 text-white text-4xl font-bold"
+          className="mt-40 text-white text-4xl px-10 font-bold"
           style={{ textShadow: '1px 1px 4px rgba(34, 34, 34, 0.6)' }}
         >
           {titulo}

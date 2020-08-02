@@ -12,6 +12,9 @@ const TrajetoriaPage = () => {
         titulo="Trajetória"
       />
       <Content>
+        <h2 className="text-3xl px-8 text-center mb-8">
+          Conheça a trajetória do nosso candidato
+        </h2>
         <Timeline />
       </Content>
     </Layout>
