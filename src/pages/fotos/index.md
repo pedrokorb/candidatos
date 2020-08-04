@@ -23,4 +23,6 @@ fotos:
     image: /img/products-grid2.jpg
   - title: Coador
     image: /img/products-grid3.jpg
+  - image: /img/github.jpg
+    title: Pedro
 ---
