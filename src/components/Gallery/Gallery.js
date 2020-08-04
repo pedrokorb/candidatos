@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react"
-import GalleryImages from 'react-grid-gallery';
+import Photos from '../Photos/Photos'
 
 const Gallery = ({ images }) => {
   const [imagesConfigured, setImagesConfigured] = useState([])
@@ -8,21 +8,16 @@ const Gallery = ({ images }) => {
     setImagesConfigured(images.map((image) => {
       return {
         src: image.image.childImageSharp.fluid.src,
-        thumbnail: image.image.childImageSharp.fluid.src,
-        caption: image.title
+        width: image.image.childImageSharp.fluid.aspectRatio,
+        height: 1
       }
     }))
   }, []) // eslint-disable-line
 
   return (
-    <div 
-      className="block w-full overflow-auto mx-auto"
-    >
-      <GalleryImages 
-        images={imagesConfigured} 
-        enableImageSelection={false}
-      />
-    </div>
+    <Photos 
+      photos={imagesConfigured}
+    />
   )
 }
 

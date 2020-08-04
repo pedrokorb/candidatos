@@ -16,7 +16,6 @@ const FotosPage = ({ data }) => {
         title={post.frontmatter.title}
       />
       <Content>
-        {console.log(post.frontmatter)}
         <h2 
           className="text-3xl px-8 text-center mb-8"
         >
