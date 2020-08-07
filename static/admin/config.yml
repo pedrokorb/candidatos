@@ -75,7 +75,9 @@ collections:
               - {label: "Local", name: "local", widget: "string"}
               - {label: "Descrição", name: "description", widget: "text"}
               - {label: "Data/Período", name: "date", widget: "string"}
-      
+              - {label: Imagem do Evento, name: image, widget: image}
+              - {label: "Legenda da Imagem", name: "imageAlt", widget: "string"}
+
       - file: "src/pages/fotos/index.md"
         label: "Galeria de Fotos"
         name: "gallery"

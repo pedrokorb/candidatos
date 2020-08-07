@@ -1,7 +1,7 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 
-import Timeline from '../components/Timeline/Timeline'
+import Timeline from '../components/OptionalTimeline/Timeline'
 import Content from '../components/Content/Content'
 import Hero from '../components/Hero/Hero'
 import Layout from '../components/Layout'
@@ -47,6 +47,14 @@ export const trajetoriaPageQuery = graphql`
           local
           description
           date
+          image {
+            childImageSharp {
+              fluid(maxWidth: 2048, quality: 100) {
+                ...GatsbyImageSharpFluid
+              }
+            }
+          }
+          imageAlt
         }
       }
     }
