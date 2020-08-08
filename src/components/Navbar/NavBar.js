@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from "react"
 import { Link } from 'gatsby'
 
-import { FaAngleDown, FaAngleUp } from 'react-icons/fa'
+import { FaAngleDown } from 'react-icons/fa'
 import Logo from '../../img/logoJose.svg'
 
 const links = [
@@ -73,7 +73,28 @@ const NavBar = () => {
             setSidebarOpen(!sidebarOpen)
           }}
         >
-          {sidebarOpen ? (<FaAngleUp className="w-8 h-8" />) : (<FaAngleDown className="w-8 h-8" />)}
+          <FaAngleDown
+            style={{
+              transform: 'rotate(0deg)',
+              transition: 'all 0.3s ease-out',
+              // eslint-disable-next-line
+              transform: sidebarOpen ? 'rotate(180deg)' : ''
+            }}
+            className="w-8 h-8"
+          />
+          
+          {/* {sidebarOpen ? 
+            (
+              <FaAngleUp 
+                className="w-8 h-8" 
+              />
+            ) : 
+            (
+              <FaAngleDown 
+                className="w-8 h-8" 
+              />
+            )
+          } */}
         </button>
       
         <div className="hidden lg:block">
@@ -90,7 +111,7 @@ const NavBar = () => {
         {sidebarOpen && (
           <div>
             <div 
-            className={`lg:hidden duration-300 transition-all ${scrolled ? "bg-opacity-100" : "bg-white bg-opacity-75 shadow-md rounded-lg"} m-4 h-full flex flex-col justify-center`}
+              className={`lg:hidden duration-300 transition-all ${scrolled ? "bg-opacity-100" : "bg-white bg-opacity-75 shadow-md rounded-lg"} m-4 h-full flex flex-col justify-center`}
             >
               <div className="text-center">
                 <div className={`nav-links`}>
